@@ -13,7 +13,10 @@ import axios from 'axios';
 
 // Create the rootSaga generator function
 function* rootSaga() {
+
+    // get sagas
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
+    yield takeEvery ('GET_DETAIL', getDetail);
 }
 
 function* fetchAllMovies() {
@@ -27,6 +30,17 @@ function* fetchAllMovies() {
         console.log('get all error');
     }
         
+}
+
+function* getDetail() {
+    // function to get movie detail by id
+    try {
+        const detail = yield axios.get(`/api/movie/${action.payload}`);
+        console.log('in detail', action.payload);
+        yield put ({type: 'GET_DETAIL'});
+    } catch (error) {
+        console.error('error getting detail', error); 
+    }
 }
 
 // Create sagaMiddleware
