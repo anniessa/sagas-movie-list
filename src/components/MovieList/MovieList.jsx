@@ -16,7 +16,7 @@ function MovieList() {
     // function to call 'SET_DETAIL' saga and load /detail page
     const getDetail = (id) => {
         dispatch({type: 'SET_DETAIL', payload: id});
-        history.push('/detail');
+        history.push('/details');
     }
 
     return (
