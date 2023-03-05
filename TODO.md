@@ -14,8 +14,8 @@
 - [x]: The details page should have a `Back to List` button, which should bring the user to the Home/List Page
 
 
-- [ ] update README
-- [ ] branches
+- [x] update README
+- [x] branches
 - [ ] 15+ commits
 
 ## Stretch Mode
