@@ -35,7 +35,7 @@ function MovieList() {
                                     <img
                                         src={movie.poster}
                                         alt={movie.title}
-                                        style={{ width: 100 }}
+                                        style={{width: 150}}
                                     />
 
                                     <h3>{movie.title}</h3>

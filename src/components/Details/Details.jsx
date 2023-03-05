@@ -14,7 +14,7 @@ function Details() {
 
     return (
         
-        <section>
+        <div>
             {/* mapping over the details reducer array */}
             {details.map(detail => {
                 return (
@@ -28,7 +28,7 @@ function Details() {
                     </div>
                 )
             })}
-        </section>
+        </div>
     )
 }
 
