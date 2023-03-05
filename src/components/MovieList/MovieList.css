@@ -1,4 +1,26 @@
-.movies {
-    display : flex;
+.movie-list {
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    gap: 50px;
+}
+
+.movies-card {
+    cursor: pointer;
+	justify-content: center;
+	align-items: center;
+    padding: 10px;
+    width: 25vw;
+    box-shadow: 0 4px 8px 0 rgba(7, 0, 0, 0.5);
+    transition: 0.3s;
+    background-color: rgb(204, 239, 253);
+}
+
+.container {
+    padding: 2px 16px;
+  }
+
+.movies-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }

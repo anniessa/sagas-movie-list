@@ -15,26 +15,35 @@ function MovieList() {
 
     // function to call 'SET_DETAIL' saga and load /detail page
     const getDetail = (id) => {
-        dispatch({type: 'SET_DETAIL', payload: id});
+        dispatch({ type: 'SET_DETAIL', payload: id });
         history.push('/details');
     }
 
     return (
         <main>
-            <h1>MovieList</h1>
-            <section className="movies">
+            <h1>Movie List</h1>
+
+            <section className='movie-list'>
                 {movies.map(movie => {
                     return (
                         <div key={movie.id} >
-                            <h3>{movie.title}</h3>
-                            <img 
-                            src={movie.poster} 
-                            alt={movie.title}
-                            onClick={() => getDetail(movie.id)}/>
+                            <div 
+                            className="movies-card" 
+                            onClick={() => getDetail(movie.id)} >
+                            <img
+                                        src={movie.poster}
+                                        alt={movie.title}
+                                        style={{width:100}}
+                                        />
+                                <div className="container">
+                                <h3>{movie.title}</h3>
+                                </div>
+                            </div>
                         </div>
                     );
                 })}
             </section>
+
         </main>
 
     );

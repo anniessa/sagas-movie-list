@@ -16,6 +16,7 @@ router.get('/', (req, res) => {
 
 });
 
+// ended up using the string_agg 
 router.get('/:id', (req, res) => {
   const queryText = 
   `SELECT "movies".title, "movies".poster, "movies".description, string_agg("genres".name, ', ') AS "genres_column" FROM "genres"

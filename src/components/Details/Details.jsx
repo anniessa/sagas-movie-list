@@ -7,6 +7,7 @@ function Details() {
     const history = useHistory();
     const details = useSelector(store => store.details);
 
+    // 
     const goBack = () =>  {
         history.push('/');
     }
@@ -15,7 +16,7 @@ function Details() {
         <div>
             <h3>Details Page</h3>
             <section>
-                {/* mapping over the details reducer */}
+                {/* mapping over the details reducer array */}
                 {details.map(detail => {
                     return (
                         <div key={detail.id}>
