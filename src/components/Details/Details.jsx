@@ -1,17 +1,21 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useHistory } from "react-router-dom";
 
 
 function Details() {
 
-    const dispatch = useDispatch();
     const history = useHistory();
     const details = useSelector(store => store.details);
+
+    const goBack = () =>  {
+        history.push('/');
+    }
 
     return (
         <div>
             <h3>Details Page</h3>
             <section>
+                {/* mapping over the details reducer */}
                 {details.map(detail => {
                     return (
                         <div key={detail.id}>
@@ -19,6 +23,7 @@ function Details() {
                             <img src={detail.poster}></img>
                             <p>{detail.description}</p>
                             <p>{detail.genres_column}</p>
+                            <button onClick={goBack}>Back</button>
                         </div>
                     )
                 })}

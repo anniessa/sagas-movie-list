@@ -1,17 +1,17 @@
 ## Base Mode
 ### Home Page/Movie List
-- [ ] When a movie poster is clicked, a user should be brought to the `/details` view for that movie.
-    - [ ] saga + generator functions (GET to /details)
+- [x] When a movie poster is clicked, a user should be brought to the `/details` view for that movie.
+    - [x] saga + generator functions (GET to /details)
 - [ ] movie poster cards 
 - [ ] flexbox
 
 
 ### Details Page
-- [ ] build Details component, set route
-    - [ ] all details **including ALL genres** for the selected movie, including title, description, and the image, too! 
-- [ ] Saga + generator functions (GET /:id)
-    -[ ] double check req.params
-- [ ]: The details page should have a `Back to List` button, which should bring the user to the Home/List Page
+- [x] build Details component, set route
+    - [x] all details **including ALL genres** for the selected movie, including title, description, and the image, too! 
+- [x] Saga + generator functions (GET /:id)
+    -[x] double check req.params
+- [x]: The details page should have a `Back to List` button, which should bring the user to the Home/List Page
 
 
 - [ ] update README
