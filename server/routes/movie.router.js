@@ -24,7 +24,8 @@ router.get('/:id', (req, res) => {
   JOIN "movies" ON "movies".id = "movies_genres".movie_id
   WHERE "movies".id = $1
   GROUP BY "movies".title, "movies".poster, "movies".description;`
-  pool.query(queryText, [req.params.id])
+  // included req.params.id because we need the id of the movie we selected 
+  pool.query(queryText, [req.params.id]) 
   .then(result => {
     res.send(result.rows);
   })
