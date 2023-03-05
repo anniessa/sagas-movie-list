@@ -13,7 +13,7 @@ For this weekend challenge I expanded on a movie management application. Movies 
 
 ## Screen Shot
 
-Include one or two screen shots of your project here (optional). Remove if unused.
+![Alt Text](./public/images/movie_saga.gif)
 
 ### Prerequisites
 

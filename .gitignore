@@ -19,6 +19,6 @@ yarn-error.log*
 
 .eslintcache
 
-TODO.md
-INSTRUCTIONS.md 
+/TODO.md
+/INSTRUCTIONS.md 
 
