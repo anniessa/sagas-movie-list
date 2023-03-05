@@ -13,18 +13,18 @@ function Details() {
     }
 
     return (
-
+        
         <section>
             {/* mapping over the details reducer array */}
             {details.map(detail => {
                 return (
                     <div key={detail.id}
                         className="detail-card">
-                        <h3>{detail.title}</h3>
-                        <img src={detail.poster}></img>
-                        <p>{detail.description}</p>
-                        <p>{detail.genres_column}</p>
-                        <button onClick={goBack}>Back</button>
+                        <h1 className='title'>{detail.title}</h1>
+                        <img src={detail.poster} className='detail-image'></img>
+                        <p className='detail-description'>{detail.description}</p>
+                        <p className='genres'>{detail.genres_column}</p>
+                        <button className='back-btn' onClick={goBack}>Back</button>
                     </div>
                 )
             })}

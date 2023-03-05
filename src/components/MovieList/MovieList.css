@@ -2,8 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 10px;
-    gap: 50px;
+    padding: 20px;
+    gap: 20px;
 }
 
 .movies-card {
@@ -11,15 +11,18 @@
 	justify-content: center;
 	align-items: center;
     border-radius:4px;
-    padding: 10px;
-    width: 25vw;
+    padding: 10px 10px;
+    width: 20vw;
+    height: 20vw;
     box-shadow: 0 4px 8px 0 rgba(7, 0, 0, 0.5);
     transition: 0.3s;
-    background-color: rgb(204, 239, 253);
+    background-image: url('../images/paper-texture.jpg');
+    font-family: 'Lato', sans-serif;
 }
 
 .container {
-    padding: 2px 16px;
+    padding: 50px;
+    align-items: center;
   }
 
 .movies-card:hover {

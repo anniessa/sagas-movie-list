@@ -27,17 +27,18 @@ function MovieList() {
                 {movies.map(movie => {
                     return (
                         <div>
-                            <div 
-                            className="movies-card" 
-                            key={movie.id} 
-                            onClick={() => getDetail(movie.id)} >
-                            <img
+                            <div
+                                className="movies-card"
+                                key={movie.id}
+                                onClick={() => getDetail(movie.id)} >
+                                <div className="container">
+                                    <img
                                         src={movie.poster}
                                         alt={movie.title}
-                                        style={{width:100}}
-                                        />
-                                <div className="container">
-                                <h3>{movie.title}</h3>
+                                        style={{ width: 100 }}
+                                    />
+
+                                    <h3>{movie.title}</h3>
                                 </div>
                             </div>
                         </div>
