@@ -14,7 +14,7 @@ function Details() {
 
     return (
         
-        <div>
+        <div className='whole-page'>
             {/* mapping over the details reducer array */}
             {details.map(detail => {
                 return (
