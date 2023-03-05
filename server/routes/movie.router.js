@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 
 });
 
-// ended up using the string_agg 
+// used the string_agg to combine all the genres
 router.get('/:id', (req, res) => {
   const queryText = 
   `SELECT "movies".title, "movies".poster, "movies".description, string_agg("genres".name, ', ') AS "genres_column" FROM "genres"
@@ -24,7 +24,8 @@ router.get('/:id', (req, res) => {
   JOIN "movies" ON "movies".id = "movies_genres".movie_id
   WHERE "movies".id = $1
   GROUP BY "movies".title, "movies".poster, "movies".description;`
-  pool.query(queryText, [req.params.id])
+  // included req.params.id because we need the id of the movie we selected 
+  pool.query(queryText, [req.params.id]) 
   .then(result => {
     res.send(result.rows);
   })
