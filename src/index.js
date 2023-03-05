@@ -57,8 +57,9 @@ const movies = (state = [], action) => {
     }
 }
 
-const details = (state = [], action) => {
-    switch(action.type) {
+// storing the information for details
+function details(state = [], action) {
+    switch (action.type) {
         case 'SET_MOVIES_ID':
             return action.payload;
         default:
