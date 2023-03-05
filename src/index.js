@@ -36,7 +36,7 @@ function* getDetail(action) {
     // function to get movie detail by id
     try {
         const detail = yield axios.get(`/api/movie/${action.payload}`);
-        console.log('in detail', action.payload);
+        // console.log('in detail', action.payload);
         yield put ({type: 'SET_MOVIES_ID', payload: detail.data});
         console.log(detail.data)
     } catch (error) {
