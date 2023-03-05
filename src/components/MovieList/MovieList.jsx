@@ -26,9 +26,10 @@ function MovieList() {
             <section className='movie-list'>
                 {movies.map(movie => {
                     return (
-                        <div key={movie.id} >
+                        <div>
                             <div 
                             className="movies-card" 
+                            key={movie.id} 
                             onClick={() => getDetail(movie.id)} >
                             <img
                                         src={movie.poster}
